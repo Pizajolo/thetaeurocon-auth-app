@@ -32,14 +32,13 @@ export interface Ticket {
     userName: string;
 }
 
-const redirectUrl = "http://localhost:3000";
+const redirectUrl = "https://register.theta-euro.com";
 const VerifyWallet: React.FC = () => {
 
     const [isConnectHighlighted, setIsConnectHighlighted] = useState(false);
     const { walletProvider } = useWeb3ModalProvider();
     const { open, close } = useWeb3Modal();
     const { address, chainId, isConnected } = useWeb3ModalAccount()
-    const [ thetaDropAddress, setThetaDropAddress] = useState<string | null>(null)
     const [nfts, setNFTs] = useState<{ tickets: TicketNFTProps[], bottles: TicketNFTProps[], userTickets: Ticket[] } | null>(null);
     const [isLoading, setLoading] = useState(false);
     const [activeWallets, setActiveWallets] = useState<{wallet: string | null, thetaDrop: string | null}>({wallet: null, thetaDrop: null});
@@ -52,10 +51,10 @@ const VerifyWallet: React.FC = () => {
                     const {request, result} = response;
                     const{address, signature} = result;
                     console.log(signature)
-                    if(thetaDropAddress == null) {
-                        console.log('Signature:', signature)
+                    if(activeWallets.thetaDrop == null) {
+                    //     console.log('Signature:', signature)
                         setSignature(signature);
-                        // setThetaDropAddress(result[0]);
+                    //     // setThetaDropAddress(result[0]);
                         setActiveWallets(prevState => ({ ...prevState, thetaDrop: address }));
                     }
                 }
@@ -132,7 +131,7 @@ const VerifyWallet: React.FC = () => {
                         {/*<w3m-button balance={'hide'} size={'md'}/>*/}
                     </div>
                 </div>
-                <span className={styles.infoTxt}>Use the "Connect ThetaDrop" Wallet Button if you hold your Ticket NFT on ThetaDrop. Otherwise use "Connect Wallet". You can connect your ThetaDrop account and MetaMask wallet at the same time to claim your Redeemables</span>
+                <span className={styles.infoTxt}>Use the &quot;Connect ThetaDrop&quot; Wallet Button if you hold your Ticket NFT on ThetaDrop. Otherwise use &quot;Connect Wallet&quot;. You can connect your ThetaDrop account and MetaMask wallet at the same time to claim your Redeemables</span>
                 <div style={{width: '400px', textAlign: 'center'}}>
                     <h5 className={styles.heading}>1. Buy an ThetaEuroCon Ticket on OpenTheta or ThetaDrop</h5>
                     <h5 className={styles.heading}>2. Sign in with the wallet you hold the Ticket with</h5>
