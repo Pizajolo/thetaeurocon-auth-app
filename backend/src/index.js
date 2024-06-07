@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
-    origin: 'https://register.theta-euro.com'
+    origin: 'https://register.theta-euro.com' // http://localhost:300
 }));
 
 app.use('/api', userRoutes); // Use the routes, prefixed with /api

@@ -78,3 +78,7 @@ out/
 # Terraform files
 *.tfstate
 *.tfstate.backup
+app/next-env.d.ts
+app/package-lock.json
+backend/package-lock.json
+package-lock 3.json

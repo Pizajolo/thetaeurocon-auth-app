@@ -17,6 +17,17 @@ export default function Home() {
                 </div>
             </nav>
             <VerifyWallet></VerifyWallet>
+            <footer className={styles.footer}>
+                <Link href="https://theta-euro.com">
+                    Home
+                </Link>
+                <Link href="https://opentheta.io/collection/thetaeurocon-tickets" target="_blank">
+                    Buy Tickets
+                </Link>
+                <Link href="https://opentheta.io/privacy" target="_blank">
+                    Privacy Policy
+                </Link>
+            </footer>
         </main>
     );
 }
