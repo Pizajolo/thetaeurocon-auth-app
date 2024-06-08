@@ -181,18 +181,18 @@ const TicketNFT: React.FC<TicketNFTProps> = ({ ticketInfo, wallet, walletType, s
                                        onChange={(e) => setLastName(e.target.value)}
                                        required/>
                             </div>
-                            <div>
-                                <label htmlFor="idNumber">ID Number</label>
-                                <input type="text" className={styles.formControl} id="idNumber" value={idNumber}
-                                       onChange={(e) => setIdNumber(e.target.value)}
-                                       required/>
-                            </div>
-                            <div>
-                                <label htmlFor="address">Address</label>
-                                <input type="text" className={styles.formControl} id="address" value={address}
-                                       onChange={(e) => setAddress(e.target.value)}
-                                       required/>
-                            </div>
+                            {/*<div>*/}
+                            {/*    <label htmlFor="idNumber">ID Number</label>*/}
+                            {/*    <input type="text" className={styles.formControl} id="idNumber" value={idNumber}*/}
+                            {/*           onChange={(e) => setIdNumber(e.target.value)}*/}
+                            {/*           required/>*/}
+                            {/*</div>*/}
+                            {/*<div>*/}
+                            {/*    <label htmlFor="address">Address</label>*/}
+                            {/*    <input type="text" className={styles.formControl} id="address" value={address}*/}
+                            {/*           onChange={(e) => setAddress(e.target.value)}*/}
+                            {/*           required/>*/}
+                            {/*</div>*/}
                             <div>
                                 <label htmlFor="email">Email</label>
                                 <input type="email" className={styles.formControl} id="email" value={email}
