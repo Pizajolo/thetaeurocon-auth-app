@@ -43,8 +43,8 @@ const TicketNFT: React.FC<TicketNFTProps> = ({ ticketInfo, wallet, walletType, s
     const { walletProvider } = useWeb3ModalProvider();
     const [firstName, setFirstName] = useState(ticketInfo.userInfo ? ticketInfo.userInfo.firstName : '');
     const [lastName, setLastName] = useState(ticketInfo.userInfo ? ticketInfo.userInfo.lastName : '');
-    const [idNumber, setIdNumber] = useState(ticketInfo.userInfo ? ticketInfo.userInfo.idNumber : '');
-    const [address, setAddress] = useState(ticketInfo.userInfo ? ticketInfo.userInfo.address : '');
+    const [idNumber, setIdNumber] = useState( 'xx');
+    const [address, setAddress] = useState('xx');
     const [email, setEmail] = useState(ticketInfo.userInfo ? ticketInfo.userInfo.email : '');
     const [isLoading, setLoading] = useState(false);
     const [userData, setUserData] = useState<User | null>(ticketInfo.userInfo ? ticketInfo.userInfo : null);
@@ -147,18 +147,18 @@ const TicketNFT: React.FC<TicketNFTProps> = ({ ticketInfo, wallet, walletType, s
                                     {lastName}
                                 </div>
                             </div>
-                            <div>
-                                <label htmlFor="idNumber">ID Number</label>
-                                <div id="idNumber" className={styles.formControl}>
-                                    {idNumber}
-                                </div>
-                            </div>
-                            <div>
-                                <label htmlFor="address">Address</label>
-                                <div id="address" className={styles.formControl}>
-                                    {address}
-                                </div>
-                            </div>
+                            {/*<div>*/}
+                            {/*    <label htmlFor="idNumber">ID Number</label>*/}
+                            {/*    <div id="idNumber" className={styles.formControl}>*/}
+                            {/*        {idNumber}*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
+                            {/*<div>*/}
+                            {/*    <label htmlFor="address">Address</label>*/}
+                            {/*    <div id="address" className={styles.formControl}>*/}
+                            {/*        {address}*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
                             <div>
                                 <label htmlFor="email">Email</label>
                                 <div id="email" className={styles.formControl}>
