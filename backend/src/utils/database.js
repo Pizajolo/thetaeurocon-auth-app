@@ -94,7 +94,7 @@ export const getAllTicketsOfWallet = async (walletAddress) => {
         const placeholders = walletAddress.map(() => '?').join(',');
 
         // Prepare the SQL query
-        const query = `SELECT id, token_id AS tokenId, CONCAT(first_name, ' ', last_name) AS userName 
+        const query = `SELECT id, token_id AS tokenId, CONCAT(SUBSTRING(first_name, 1, 1), '. ', SUBSTRING(last_name, 1, 1), '.') AS userName 
                    FROM tickets 
                    WHERE wallet_address IN (${placeholders})`;
 
