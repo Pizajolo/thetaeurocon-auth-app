@@ -52,11 +52,11 @@ export const getTicket = async (tokenId) => {
         if (row.length > 0) {
             return {
                 id: row[0].id,
-                firstName: row[0].first_name,
-                lastName: row[0].last_name,
-                idNumber: row[0].id_number,
-                address: row[0].address,
-                email: row[0].email,
+                firstName: row[0].first_name.slice(0,1) + '...',
+                lastName: row[0].last_name.slice(0,1) + '...',
+                idNumber: 'xx',
+                address: 'xx',
+                email: row[0].email.slice(0,1) + '...',
                 wallet: row[0].wallet_address,
             };
         } else {
